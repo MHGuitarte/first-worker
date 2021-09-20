@@ -1,12 +1,21 @@
+name: PROD-Deploy
+on:
+  push:
+    branches:
+      - master
 jobs:
   deploy:
     runs-on: ubuntu-latest
     name: Deploy
     steps:
+      - run: echo "Build START
       - uses: actions/checkout@master
       - name: Build site
         run: 'npm run build'
+      - run: echo "Build OK"
+      - run: echo "Deployment START
       - name: Publish
         uses: cloudflare/wrangler-action@1.3.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
+      - run: echo "Deployment OK"
