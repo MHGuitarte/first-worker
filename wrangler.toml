@@ -1,12 +1,13 @@
 name = "first-worker"
 type = "javascript"
 compatibility_date = "2021-09-20"
-account_id = ""
+account_id = "8bdcad103fb48eaa8bc0c1ff08676db0"
+workers_dev = true
 
 [env.staging]
-name = "my-worker-staging"
+name = "first-worker-staging"
 vars = { ENVIRONMENT = "staging" }
 
 [env.production]
-name = "my-worker"
+name = "my-first-worker"
 vars = { ENVIRONMENT = "production" }
