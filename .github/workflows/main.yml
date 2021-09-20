@@ -8,15 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     name: Clean Install
     steps:
-      - uses: actions/checkout@master
-        run: npm ci
+      - run: npm ci
   build:
     needs: setup
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-        run: 'npm run build'
+      - run: 'npm run build'
 
   publish:
     needs: build
