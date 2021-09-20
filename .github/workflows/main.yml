@@ -7,9 +7,9 @@ jobs:
   setup:
     runs-on: ubuntu-latest
     name: Clean Install
-      steps:
-        - uses: actions/checkout@master
-          run: npm ci
+    steps:
+      - uses: actions/checkout@master
+        run: npm ci
   build:
     needs: setup
     name: Build
