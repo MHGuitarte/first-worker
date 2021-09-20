@@ -1,9 +1,11 @@
-name: PROD-Deploy
+name: Deploy
+
 on:
   push:
     branches:
       - master
 jobs:
-  steps:
-    - name: Deploy to Cloudflare Workers with Wrangler
-    uses: cloudflare/wrangler-action@1.2.0
+    steps:
+      - uses: actions/checkout@v2
+      - name: Publish
+        uses: cloudflare/wrangler-action@1.3.0
