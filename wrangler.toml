@@ -2,16 +2,11 @@ name = "first-worker"
 type = "javascript"
 compatibility_date = "2021-09-20"
 account_id = ""
-route = "dev.example.com/*"
 
 [env.staging]
 name = "my-worker-staging"
 vars = { ENVIRONMENT = "staging" }
-route = "staging.example.com/*"
-
 
 [env.production]
 name = "my-worker"
 vars = { ENVIRONMENT = "production" }
-route = "example.com/*"
-
