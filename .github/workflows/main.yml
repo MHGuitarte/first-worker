@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Deploy
     steps:
-      - run: echo "Build START
+      - run: echo "Build START"
       - uses: actions/checkout@master
       - name: Build site
         run: 'npm run build'
