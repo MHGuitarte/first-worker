@@ -6,7 +6,7 @@ addEventListener('fetch', event => {
  * @param {Request} request
  */
 async function handleRequest(request) {
-  return new Response(JSON.stringify({"patata": "124"}), {
+  return new Response(JSON.stringify({"patata": "1234"}), {
     headers: { 'content-type': 'application/json' },
   })
 }
